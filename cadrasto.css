@@ -1,3 +1,4 @@
+/* ===== Base ===== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,6 +24,7 @@ h1 {
     color: #333;
 }
 
+/* ===== Card ===== */
 form {
     background: #ffffff;
     width: 360px;
@@ -43,6 +45,7 @@ form {
     }
 }
 
+/* ===== Campos ===== */
 label {
     display: block;
     margin-top: 14px;
@@ -58,8 +61,21 @@ input {
     margin-top: 6px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+input::placeholder {
+    color: #aaa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+/* ===== Botão ===== */
 button {
     width: 100%;
     margin-top: 25px;
@@ -71,4 +87,23 @@ button {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 420px) {
+    form {
+        width: 90%;
+    }
 }

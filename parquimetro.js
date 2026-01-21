@@ -1,3 +1,9 @@
+
+if (localStorage.getItem("logado") !== "true") {
+    window.location.href = "login.html";
+}
+
+
 class Estacionamento {
     constructor(placa, valor) {
         this.placa = placa;
