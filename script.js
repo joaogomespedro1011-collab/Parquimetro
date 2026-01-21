@@ -67,3 +67,22 @@ document.getElementById("calcular").addEventListener("click", () => {
         `;
     }
 });
+
+
+const botaoTema = document.getElementById("botaoTema");
+
+// aplicar tema salvo ao carregar
+const temaSalvo = localStorage.getItem("tema") || "light";
+document.body.classList.add(temaSalvo);
+botaoTema.textContent = temaSalvo === "dark" ? "☀️" : "🌙";
+
+botaoTema.addEventListener("click", () => {
+    const temaAtual = document.body.classList.contains("dark") ? "dark" : "light";
+    const novoTema = temaAtual === "dark" ? "light" : "dark";
+
+    document.body.classList.remove("dark", "light");
+    document.body.classList.add(novoTema);
+
+    localStorage.setItem("tema", novoTema);
+    botaoTema.textContent = novoTema === "dark" ? "☀️" : "🌙";
+});

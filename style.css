@@ -45,4 +45,23 @@ button {
     cursor: pointer;
 }
 
+body.dark {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark main {
+    background: #2c2c2c;
+}
+
+body.dark input,
+body.dark button {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+
+
+
 
